@@ -20,10 +20,10 @@ class CreateTransactionRequest {
   final MerchantAuthentication merchantAuthentication;
 
   @JsonKey(name: 'refId')
-  final String referenceID;
+  final String? referenceID;
 
   @JsonKey(name: 'transactionRequest')
-  final TransactionRequest transactionRequest;
+  final TransactionRequest? transactionRequest;
 
   CreateTransactionRequest(
     this.merchantAuthentication, {

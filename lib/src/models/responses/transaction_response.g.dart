@@ -19,17 +19,14 @@ TransactionResponse _$TransactionResponseFromJson(Map<String, dynamic> json) {
     json['testRequest'] as String,
     json['accountNumber'] as String,
     json['accountType'] as String,
-    (json['messages'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ResponseMessage.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    (json['messages'] as List<dynamic>)
+        .map((e) => ResponseMessage.fromJson(e as Map<String, dynamic>))
+        .toList(),
     json['transHashSha2'] as String,
     json['SupplementalDataQualificationIndicator'] as int,
-  )..errors = (json['errors'] as List)
-      ?.map((e) =>
-          e == null ? null : ErrorMessage.fromJson(e as Map<String, dynamic>))
-      ?.toList();
+  )..errors = (json['errors'] as List<dynamic>?)
+      ?.map((e) => ErrorMessage.fromJson(e as Map<String, dynamic>))
+      .toList();
 }
 
 Map<String, dynamic> _$TransactionResponseToJson(
@@ -46,8 +43,8 @@ Map<String, dynamic> _$TransactionResponseToJson(
       'testRequest': instance.testRequest,
       'accountNumber': instance.accountNumber,
       'accountType': instance.accountType,
-      'messages': instance.messages?.map((e) => e?.toJson())?.toList(),
-      'errors': instance.errors?.map((e) => e?.toJson())?.toList(),
+      'messages': instance.messages.map((e) => e.toJson()).toList(),
+      'errors': instance.errors?.map((e) => e.toJson()).toList(),
       'transHashSha2': instance.transHashSha2,
       'SupplementalDataQualificationIndicator':
           instance.supplementalDataQualificationIndicator,

@@ -42,7 +42,7 @@ class TransactionResponse {
   @JsonKey(name: 'messages')
   List<ResponseMessage> messages;
   @JsonKey(name: 'errors')
-  List<ErrorMessage> errors;
+  List<ErrorMessage>? errors;
   @JsonKey(name: 'transHashSha2')
   final String transHashSha2;
   @JsonKey(name: 'SupplementalDataQualificationIndicator')

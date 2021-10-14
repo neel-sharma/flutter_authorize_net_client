@@ -5,7 +5,7 @@ homepage: https://github.com/GAM3RG33K/flutter_authorize_net_client
 repository: https://github.com/GAM3RG33K/flutter_authorize_net_client
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
@@ -13,18 +13,18 @@ dependencies:
     sdk: flutter
 
   # for HTTP requests
-  http: ^0.13.0
+  http:
   # do not change version before implementing null-safety
   # for data model to/from json conversion
-  json_annotation: ^3.1.1
+  json_annotation: ^4.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   # do not change version before implementing null-safety
-  build_runner: ^1.0.0
+  build_runner: ^1.10.0
   # do not change version before implementing null-safety
-  json_serializable: ^3.5.1
+  json_serializable: ^4.1.0
 
 
 flutter:

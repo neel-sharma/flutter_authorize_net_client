@@ -9,7 +9,7 @@ part 'payment.g.dart';
 @JsonSerializable(explicitToJson: true)
 class Payment {
   @JsonKey(name: 'creditCard')
-  final CreditCard creditCard;
+  final CreditCard? creditCard;
 
   Payment({this.creditCard});
 

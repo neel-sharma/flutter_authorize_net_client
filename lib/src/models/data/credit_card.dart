@@ -8,11 +8,11 @@ part 'credit_card.g.dart';
 @JsonSerializable(explicitToJson: true)
 class CreditCard {
   @JsonKey(name: 'cardNumber')
-  final String cardNumber;
+  final String? cardNumber;
   @JsonKey(name: 'expirationDate')
-  final String expirationDate; // yyyy-MM format only
+  final String? expirationDate; // yyyy-MM format only
   @JsonKey(name: 'cardCode')
-  final String cardCode;
+  final String? cardCode;
 
   CreditCard({this.cardNumber, this.expirationDate, this.cardCode});
 

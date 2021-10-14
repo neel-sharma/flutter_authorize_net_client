@@ -9,16 +9,14 @@ part of 'response_messages.dart';
 ResponseMessages _$ResponseMessagesFromJson(Map<String, dynamic> json) {
   return ResponseMessages(
     json['resultCode'] as String,
-    (json['message'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ResponseMessage.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    (json['message'] as List<dynamic>)
+        .map((e) => ResponseMessage.fromJson(e as Map<String, dynamic>))
+        .toList(),
   );
 }
 
 Map<String, dynamic> _$ResponseMessagesToJson(ResponseMessages instance) =>
     <String, dynamic>{
       'resultCode': instance.resultCode,
-      'message': instance.message?.map((e) => e?.toJson())?.toList(),
+      'message': instance.message.map((e) => e.toJson()).toList(),
     };
